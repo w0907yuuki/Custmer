@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.jp/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <!-- Bootstrap Icons CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="/css/topmenu.css"> -->
+    <link rel="stylesheet"href="/css/topmenu.css">
+</head>
+<body>
+    <div class="center-text">
+        <p>portfolio</p>
+    </div>
+    <div class="container center-container">
+        <div class="button-grid">
+            <div class="icon-text-grid">   
+                <a th:href="@{/custmer}" class="btn btn-outline-primary icon-link-button">
+                    <i class="bi bi-building"></i>
+                    <span>顧客管理</span>
+                </a>
+            </div> 
+        
+            <div class="icon-text-grid">   
+                <a th:href="@{/employee}" class="btn btn-outline-primary icon-link-button">
+                    <i class="bi bi-people-fill"></i>
+                    <span>社員管理</span>
+                </a>
+            </div> 
+            <div class="icon-text-grid">   
+                <a th:href="@{/inventory}" class="btn btn-outline-primary icon-link-button">
+                    <i class="bi bi-box-seam"></i>
+                    <span>在庫管理</span>
+                </a>
+            </div> 
+            <div class="icon-text-grid">   
+                <a th:href="@{/shift}" class="btn btn-outline-primary icon-link-button">
+                    <i class="bi bi-calendar-week"></i>
+                    <span>シフト管理</span>
+                </a>
+            </div> 
+            <div class="icon-text-grid">   
+                <a th:href="@{/shift}" class="btn btn-outline-primary icon-link-button">
+                  <i class="bi bi-clock"></i>
+                    <span>勤怠管理</span>
+                </a>
+            </div> 
+            <div class="icon-text-grid">   
+                <a th:href="@{/reservation}" class="btn btn-outline-primary icon-link-button">
+                    <i class="bi bi-calendar-plus"></i>
+                    <span>予約システム</span>
+                </a>
+            </div> 
+            <div class="icon-text-grid">   
+                <a th:href="@{/task}" class="btn btn-outline-primary icon-link-button">
+                 <i class="bi bi-list-check"></i>
+                    <span>タスク管理</span>
+                </a>
+            </div> 
+            <div class="icon-text-grid">   
+                <a th:href="@{/salary}" class="btn btn-outline-primary icon-link-button">
+                   <i class="bi bi-calculator"></i>
+                    <span>給与計算</span>
+                </a>
+            </div>
+            <div class="icon-text-grid">   
+                <a th:href="@{/salary}" class="btn btn-outline-primary icon-link-button">
+                   <i class="bi bi-calculator"></i>
+                    <span>給与</span>
+                </a>
+            </div>  
+        </div>
+    </div>
+            
+</body>
+</html>
