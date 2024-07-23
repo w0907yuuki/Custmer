@@ -1,0 +1,55 @@
+.main{
+    position: relative; /* 相対位置 */
+      height: 100vh; /* コンテナの高さを画面の高さに設定 */
+  }
+  
+  .position{
+     position: absolute; /* 絶対位置 */
+      top: 50%; /* 上端を画面の50%に設定 */
+      left: 50%; /* 左端を画面の50%に設定 */
+      transform: translate(-50%, -50%); /* 中央揃え */
+      text-align: center;
+  }
+  
+  .UserID{
+    width: 50vh;
+    height: 5vh;
+    margin-top: 10px; /* 上に20ピクセルの空白を追加 */
+    margin-bottom: 10px; /* 下に20ピクセルの空白を追加 */
+    font-size: 16px;
+  }
+  
+  .Password {
+    width: 50vh;
+    height: 5vh;
+    margin-top: 10px; /* 上に20ピクセルの空白を追加 */
+    margin-bottom: 10px; /* 下に20ピクセルの空白を追加 */
+    font-size: 16px;
+  }
+    
+.loginbutton{
+    width: 50vh;
+    height: 6vh;
+    font-size: 16px;
+    margin-top: 10px; /* 上に20ピクセルの空白を追加 */
+    margin-bottom: 20px; /* 下に20ピクセルの空白を追加 */
+    background-color: aqua;
+  }
+  
+  .link{
+    margin-top: 10px; /* 上に20ピクセルの空白を追加 */
+    margin-bottom: 30px; /* 下に20ピクセルの空白を追加 */
+  }
+  
+  .info{
+    color: rgb(153, 153, 153);
+  }
+    
+  .signupbutton{
+    width: 50vh;
+    height: 6vh;
+    font-size: 16px;
+    margin-top: 10px; /* 上に20ピクセルの空白を追加 */
+    margin-bottom: 20px; /* 下に20ピクセルの空白を追加 */
+    background-color: aqua;
+  }

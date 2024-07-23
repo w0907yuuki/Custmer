@@ -1,0 +1,53 @@
+spring:
+ application:
+  name: Custmer
+ # Open Session in Viewの使用有無
+ jpa:
+  open-in-view: false
+  show-sql: true
+  properties:
+   hibernate:
+    format_sql: true
+# メール配信用アカウント接続情報
+ mail:
+  host: smtp.gmail.com
+  port: 587
+  username: edo009977yuuki@gmail.com
+  password: fqct lorb fif a dwc b
+  properties:
+   mail:
+    smtp:
+     auth: true
+     starttls:
+      enable: true
+      required: true
+ datasource:
+  url: jdbc:mysql://localhost/user?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false
+  username : root
+  password : root
+  driver-class-name: com.mysql.cj.jdbc.Driver
+  
+  # Spring Security設定
+# アカウントロックを行うログイン失敗回数境界値
+security:
+ locking-border-count: 3
+# アカウントロックの継続時間
+ locking-time: 1
+
+# ログレベル
+logging:
+ level:
+  root: INFO
+  com:
+   example:
+    demo: DEBUG
+# ログ出力先
+ file:
+  name: C:/work/log/debug.log
+
+
+# ワンタイムコード有効時間
+one-time-code:
+  valid-time: 3m
+# ワンタイムコードの長さ
+  length: 4

@@ -1,0 +1,126 @@
+.main{
+    display: flex;
+    justify-content: center;
+    position: relative; /* 相対位置 */
+    height: 100vh; /* コンテナの高さを画面の高さに設定 */
+    justify-content: center;
+  }
+.h2{
+  pointer-events: none;
+}
+.position{
+    position: absolute; /* 絶対位置 */
+     top: 50%; /* 上端を画面の50%に設定 */
+     left: 50%; /* 左端を画面の50%に設定 */
+     transform: translate(-50%, -50%); /* 中央揃え */
+     text-align: center;
+     width: 530px;
+ }
+
+ .textbox-container {
+    /*displayが入れたらなぜかずれる。コンテナーいっぱいに入れようとするからか*/
+    text-align: center;
+  }
+  .firstName{
+   width: 50vh;
+   height: 3vh;
+   margin-top: 10px; 
+   margin-bottom: 10px;
+   font-size: 16px;
+ }
+ .lastName{
+    width: 50vh;
+    height: 3vh;
+    margin-top: 10px; 
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  .p-birth{
+    margin-left: -43.5vh;
+    font-size: 13px;
+    margin-bottom: 1px;
+    pointer-events: none;
+  }
+
+  .p-gender{
+    margin-left: -41vh;
+    font-size: 13px;
+    margin-bottom: 1px;
+    pointer-events: none;
+
+  }
+  .SelectBirthday{
+    text-align: center;
+  }
+  .selectyear{
+    width: 15vh;
+    height: 3vh;
+    margin-right: 15px;
+    }
+    .selectmon{
+    width: 10vh;
+    height: 3vh;
+    margin-left: 8px;
+}
+.selectday{
+    width: 10vh;
+    height: 3vh;
+    margin-right: 8px;
+    margin-left: 8px;
+    font-size: 16px;
+}
+  .checkgender{
+    text-align: center;
+  }
+  .radioman{
+    margin-left: -21vh;
+    }
+.radiowoman{
+    margin-left: 30px;
+}
+.radioother{
+    margin-left: 25px;
+    }
+
+.mailaddress{
+    width: 50vh;
+    height: 3vh;
+    margin-top: 5px; 
+    margin-bottom: 15px; 
+    font-size: 16px;
+}
+.textid{
+    width: 50vh;
+    height: 3vh;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+    .SignUpPasswordInput {
+    width: 50vh;
+    height: 3vh;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+.SignUpPassCheck {
+    width: 50vh;
+    height: 3vh;
+    font-size: 16px;
+     margin-bottom: 15px; 
+  }
+  .createaccont{
+    width: 48vh;
+    height: 6vh;
+    font-size: 16px;
+    margin-bottom: 20px; 
+    background-color: aqua;
+  }
+
+
+ .link{
+   margin-top: 10px;
+   margin-bottom: 30px; 
+ }
+ 
+ .info{
+   color: rgb(153, 153, 153);
+ }

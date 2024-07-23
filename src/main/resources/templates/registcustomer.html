@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>新規登録</title>
+</head>
+<body>
+    <div th:insert="~{common/sourceList :: sourceList}"></div>
+    <div th:replace="~{common/header :: header}"></div>
+    <div th:replace="~{common/messageIcon :: messageIcon}"></div>
+    <form th:action="@{/registcustomer}" th:object="${registcustomerForm}" method="post">
+
+      <h2 class="mt-3">顧客登録</h2>
+      <span th:text="${message}"></span><br />
+      <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <input type='text' placeholder="顧客名" class='customerName'th:field="*{name}"></input><br /> 
+        </div>
+      </div>
+     <span>取引状態：</span>
+      <div class='checkstate'>
+        <input type="radio" value="true" th:field="*{isState}">
+        <label for='radio'>取引中</label>
+        <input type="radio"  value="false" th:field="*{isState}">
+        <label for='radio'>取引終了</label> 
+    　</div>
+      <button>送信</button><br />
+      <a href="/customer">戻る</a>
+    </form>
+
+</body>
+</html>

@@ -15,19 +15,22 @@
     </div>
     <div class="container center-container">
         <div class="button-grid">
-            <div class="icon-text-grid">   
-                <a th:href="@{/custmer}" class="btn btn-outline-primary icon-link-button">
-                    <i class="bi bi-building"></i>
-                    <span>顧客管理</span>
-                </a>
-            </div> 
-        
-            <div class="icon-text-grid">   
-                <a th:href="@{/employee}" class="btn btn-outline-primary icon-link-button">
-                    <i class="bi bi-people-fill"></i>
-                    <span>社員管理</span>
-                </a>
-            </div> 
+            <th:block th:if="${hasUserManageAuth}">
+                <div class="icon-text-grid">   
+                    <a th:href="@{/customer}" class="btn btn-outline-primary icon-link-button">
+                        <i class="bi bi-building"></i>
+                        <span>顧客管理</span>
+                    </a>
+                </div> 
+            </th:block>
+            <th:block th:if="${hasUserManageAuth}">            
+                <div class="icon-text-grid">   
+                    <a th:href="@{/userList}" class="btn btn-outline-primary icon-link-button">
+                        <i class="bi bi-people-fill"></i>
+                        <span>社員管理</span>
+                    </a>
+                </div>
+            </th:block> 
             <div class="icon-text-grid">   
                 <a th:href="@{/inventory}" class="btn btn-outline-primary icon-link-button">
                     <i class="bi bi-box-seam"></i>
@@ -69,7 +72,7 @@
                    <i class="bi bi-calculator"></i>
                     <span>給与</span>
                 </a>
-            </div>  
+            </div>
         </div>
     </div>
             
