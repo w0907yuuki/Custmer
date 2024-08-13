@@ -21,7 +21,7 @@ public class Customer {
 	@Column(name="custmerid")
 	//自動ID生成
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Long customerid;
 
 	@Column(name="custmername")
 	private String name;

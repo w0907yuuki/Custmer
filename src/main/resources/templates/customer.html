@@ -52,7 +52,7 @@
                             </thead>
                             <tbody>
                                 <tr th:each="customer, stat  : ${customerList}" >  
-                                    <td th:id="|id_${stat.count}|"><span th:text="${customer.id}"></span></td>
+                                    <td th:id="|id_${stat.count}|"><span th:text="${customer.customerid}"></span></td>
                                     <td th:id="|name_${stat.count}|"><span th:text="${customer.name}"></span></td>
                                     <td th:id="|isState_${stat.count}|"><span th:text="${customer.isState}"></span></td>
                                 </tr>

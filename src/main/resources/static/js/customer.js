@@ -11,9 +11,9 @@ $(function() {
         // 更新ボタン、削除ボタンを活性化
         $('#editBtn').removeAttr('disabled');
         $('#deleteDummyBtn').removeAttr('disabled');
-        console.log("clock");
         // ログインID一時保管
         editSelectedcustomerid($(this));
+                
     });
     
     $('#deleteOkBtn').click(function() {
@@ -29,8 +29,10 @@ $(function() {
 function editSelectedcustomerid(row) {
     row.find('td').each(function() {
         var columnId = $(this).attr('id');
-        if (columnId.startsWith('customerid_')) {
+        if (columnId.startsWith('id_')) {
             $('#selectedcustomerid').val($(this).text());
+            console.log($('#selectedcustomerid').val());
+             
             return false;
         }
     });

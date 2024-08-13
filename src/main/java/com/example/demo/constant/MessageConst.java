@@ -72,5 +72,15 @@ public class MessageConst {
 	/** ユーザー情報編集画面：ユーザー更新完了 */
 	public static final String USEREDIT_UPDATE_SUCCEED = "userEdit.updateSucceed";
 
+	/** 顧客登録画面　：　顧客登録完了 */
 	public static final String REGIST_CUETOMER_COMPLETE = "registConfirm.complete";
+	
+	/** 顧客編集画面　：　顧客編集完了 */
+	public static final String CUSTOMEREDIT_CUSTOMER_SUCCEED = "customerEdit.updateSucceed";
+	
+	/** 顧客編集画面　：　顧客編集失敗 */
+	public static final String CISTOMEREDIT_CUSTOMER_FAILED = "customerEdit.updateFailed";
+	
+	/** 顧客編集画面　：　存在しない個客ID */
+	public static final String CUSTOMEREDIT_NON_EXISTED_CUSTOMER_ID = "customerEdit.nonExistedCustomerId";
 }

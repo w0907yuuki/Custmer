@@ -40,7 +40,7 @@ public class RegistCustomerServiceImpl implements RegistCustomerService {
 	private Customer registCustomerInfo(CustomerInfo dto) {
 		System.out.println(dto.getIsState() +"セット");
 		var customerInfo = new Customer();
-		customerInfo.setId(dto.getId());
+		customerInfo.setCustomerid(dto.getCustomerid());
 		customerInfo.setName(dto.getName());
 		customerInfo.setIsState(dto.getIsState());
 		customerInfo.setStart_time(LocalDateTime.now());		

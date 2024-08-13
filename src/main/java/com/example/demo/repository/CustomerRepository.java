@@ -11,5 +11,5 @@ import com.example.demo.entity.Customer;
 @Repository
 public interface CustomerRepository extends JpaRepository<Customer,Long>{
 
-	List<Customer> findByName(String name);
+	List<Customer> findByName(String customername);
 }

@@ -29,7 +29,7 @@ public class UrlConst {
 	/** ユーザー編集画面 */
 	public static final String USER_EDIT = "/userEdit";
 	
-	public static final String CUSTOMER_EDIT = "/editcustomer";
+	public static final String CUSTOMER_EDIT = "/customeredit";
 	
 	public static final String CUSTOMER_REGIST ="/registcustomer";
 	

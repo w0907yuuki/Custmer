@@ -11,7 +11,7 @@ public class CustomerForm {
 
 	private Boolean state;
 
-	private String selectedcustomerid;
+	private Long selectedcustomerid;
 
 	public CustomerForm clearSelecteduserid() {
 		this.selectedcustomerid = null;

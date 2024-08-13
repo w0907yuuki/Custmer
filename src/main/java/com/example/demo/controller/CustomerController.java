@@ -39,6 +39,7 @@ public class CustomerController {
 	@PostMapping(value = UrlConst.CUSTOMER, params = "edit")
 	public String updateUser(CustomerForm form) {
 		System.out.println("edit");
+		System.out.println(form.getSelectedcustomerid());
 		session.setAttribute(SessionKeyConst.SELECTED_CUSTOMER_ID, form.getSelectedcustomerid());
 		return AppUtil.doRedirect(UrlConst.CUSTOMER_EDIT);
 	}
