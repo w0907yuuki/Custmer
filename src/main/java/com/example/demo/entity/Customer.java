@@ -30,7 +30,7 @@ public class Customer {
 	private LocalDateTime start_time;
 	
 	@Column(name="state")
-	private Boolean isState;
+	private boolean isState;
 	
 	public Customer() {
 		

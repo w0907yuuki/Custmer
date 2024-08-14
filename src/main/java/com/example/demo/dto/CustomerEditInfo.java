@@ -7,5 +7,5 @@ public class CustomerEditInfo {
 	
 	private String name;
 	
-	private boolean isState;
+	private Boolean isState;
 }

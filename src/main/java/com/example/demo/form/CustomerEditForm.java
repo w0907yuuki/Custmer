@@ -9,4 +9,4 @@ public class CustomerEditForm {
 	
 	private boolean state;
 	
-}
+} 

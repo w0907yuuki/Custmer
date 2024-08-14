@@ -9,7 +9,7 @@ public class CustomerForm {
 
 	private String name;
 
-	private Boolean state;
+	private boolean state;
 
 	private Long selectedcustomerid;
 

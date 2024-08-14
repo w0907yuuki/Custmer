@@ -35,7 +35,7 @@ public class CustomerEditController {
 	private final MessageSource messageSource;
 
 	@GetMapping(UrlConst.CUSTOMER_EDIT)
-	public String View(Model model) throws Exception {
+	public String View(Model model,CustomerEditForm form) throws Exception {
 		var customerid = (Long)session.getAttribute(SessionKeyConst.SELECTED_CUSTOMER_ID);
 		var customerInfoOpt = service.serchCustomerInfo(customerid);
 		if(customerInfoOpt.isEmpty()) {
@@ -74,5 +74,6 @@ public class CustomerEditController {
 		model.addAttribute("customerEditInfo",mapper.map(customerInfo,CustomerEditInfo.class));
 		System.out.println(customerInfo.getCustomerid());
 		System.out.println(customerInfo.getName());
+		System.out.println(customerInfo.isState());
 	}
 }

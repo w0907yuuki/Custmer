@@ -32,12 +32,10 @@
                  <tr>
                      <td><label for="customerid">取引状態：</label></td>
                      <td>
-                          <div class='checkstate'>
-                            <input type="radio" value="true" th:field="*{state}">
-                            <label for='radio'>取引中</label>
-                            <input type="radio"  value="false" th:field="*{state}">
-                            <label for='radio'>取引終了</label> 
-                        　</div>
+                            <input type="radio" id="stateTrue" name="state" th:field="*{state}" value="true">
+                            <label for="stateTrue">取引中</label>
+                            <input type="radio" id="stateFalse" name="state" th:field="*{state}" value="false">
+                            <label for="stateFalse">取引終了</label>
                     </td>
                 </tr>
             </table>

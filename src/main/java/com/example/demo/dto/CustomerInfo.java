@@ -11,5 +11,5 @@ public class CustomerInfo {
 
 	private String start_time;
 
-	private Boolean isState;
+	private boolean isState;
 }

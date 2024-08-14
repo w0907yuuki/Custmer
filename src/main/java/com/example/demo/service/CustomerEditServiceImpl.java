@@ -36,7 +36,8 @@ public class CustomerEditServiceImpl  implements CustomerEditService{
 		}
 		
 		var updateInfo = updateInfoOpt.get();
-		updateInfo.setIsState(customerUpdateInfo.isState());
+		updateInfo.setState(customerUpdateInfo.state);
+		updateInfo.setName(customerUpdateInfo.name);
 		System.out.println("updateInfo = " +updateInfo);
 		try {
 			repository.save(updateInfo);

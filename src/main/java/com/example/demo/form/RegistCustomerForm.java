@@ -9,6 +9,6 @@ public class RegistCustomerForm {
 	
 	private String name;
 	
-	private Boolean isState;
+	private boolean isState;
 	
 }

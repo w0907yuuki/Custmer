@@ -9,6 +9,6 @@ public class CustomerUpdateInfo {
 	
 	public String name;
 	
-	public boolean state;
+	public Boolean state;
 
 }
