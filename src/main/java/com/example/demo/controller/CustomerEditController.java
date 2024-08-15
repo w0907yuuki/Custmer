@@ -57,7 +57,7 @@ public class CustomerEditController {
 		if(updateMessage == CustomerEditMessage.FAILED) {
 			model.addAttribute("message",AppUtil.getMessage(messageSource, updateMessage.getMessageId()));
 			System.out.println("更新失敗");
-			return "customeredit";
+			return "customerediterror";
 		}
 		
 		setupCommonInfo(model, updateResult.getUpdateCustomerInfo());
