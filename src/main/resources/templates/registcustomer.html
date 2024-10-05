@@ -14,15 +14,15 @@
       <span th:text="${message}"></span><br />
       <div class="row g-3 align-items-center">
         <div class="col-auto">
-            <input type='text' placeholder="顧客名" class='customerName'th:field="*{name}"></input><br /> 
+            <input type='text' placeholder="顧客名" class='customerName'th:field="*{name}" /><br /> 
         </div>
       </div>
      <span>取引状態：</span>
       <div class='checkstate'>
-        <input type="radio" value="true" th:field="*{isState}">
-        <label for='radio'>取引中</label>
-        <input type="radio"  value="false" th:field="*{isState}">
-        <label for='radio'>取引終了</label> 
+        <input type="radio" value="true" th:field="*{state}">
+        <label for='radiostart'>取引中</label>
+        <input type="radio"  value="false" th:field="*{state}">
+        <label for='radioend'>取引終了</label> 
     　</div>
       <button>送信</button><br />
       <a href="/customer">戻る</a>

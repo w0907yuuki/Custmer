@@ -33,10 +33,12 @@ public class AppUtil {
 	 * @param param パラメーター
 	 * @return 前後にワイルドカードが付いたパラメーター
 	 */
-	public static String addWildcard(String param) {
+	public static String straddWildcard(String param) {
 		return "%" + param + "%";
 	}
-
+	public static String lngaddWildcard(Long param) {
+		return "%" + param + "%";
+	}
 	/**
 	 * リダイレクト先のURLを受け取って、リダイレクトURLを作成します。
 	 * 

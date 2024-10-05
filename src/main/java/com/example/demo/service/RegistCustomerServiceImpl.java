@@ -22,7 +22,7 @@ public class RegistCustomerServiceImpl implements RegistCustomerService {
 
 	@Override
 	public RegistResult regist(CustomerInfo dto) {
-		var userInfoOpt = repository.findByName(dto.getName());
+		var userInfoOpt = repository.findByNameLike(dto.getName());
 		System.out.println(userInfoOpt);
 		if (!userInfoOpt.isEmpty()) {
 			return RegistResult.FAILURE_BY_SIGNUP_PROCEEDING;

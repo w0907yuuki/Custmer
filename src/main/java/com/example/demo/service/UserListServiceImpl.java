@@ -69,7 +69,7 @@ public class UserListServiceImpl implements UserListService {
 	 * @return 検索結果
 	 */
 	private List<User> findUserInfoByParam(UserSearchInfo dto) {
-		var loginIdParam = AppUtil.addWildcard(dto.getUserid());
+		var loginIdParam = AppUtil.straddWildcard(dto.getUserid());
 
 		if (dto.getUserStatusKind() != null && dto.getAuthorityKind() != null) {
 			return repository.findByUseridLikeAndUserStatusKindAndAuthorityKind(loginIdParam,

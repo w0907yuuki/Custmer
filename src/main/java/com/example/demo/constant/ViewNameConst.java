@@ -30,5 +30,12 @@ public class ViewNameConst {
 	public static final String USER_EDIT = "userEdit";
 	/** ユーザー編集画面_エラー時 */
 	public static final String USER_EDIT_ERROR = "userEditError";
+	
+	/** 顧客リスト画面 */
+	public static final String CUSTOMER_LIST = "customer";
+	
+	/** 顧客リスト画面 */
+	public static final String CUSTOMER_LIST_REGIST = "registcustomer";
+	
 
 }

@@ -24,6 +24,16 @@
             <form th:action="@{/customer}" method="post" th:object="${customerForm}">
                 <div class="mt-1">
                     <table>
+						<tr>
+							<td><span>顧客ID：</span></td>
+	                            <td>
+	                                <div class="row g-3 align-items-center">
+	                                    <div class="col-auto">
+	                                        <input type="text" class="form-control" th:field="*{id}">
+	                                    </div>
+	                                </div>
+	                            </td>
+						</tr>
                         <tr>
                             <td><span>顧客名：</span></td>
                             <td>
@@ -37,6 +47,7 @@
                                 </div>
                             </td>
                         </tr>
+						
                     </table>
                     <input type="submit" class="btn btn-primary mt-3" name="search" value="検索">
                 </div>
@@ -59,7 +70,7 @@
                             </tbody>
                         </table>
                         <input type="text" th:field="*{selectedcustomerid}" hidden>
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-primary" name="regist">
                             <i class="bi bi-plus-lg"></i>登録
                         </button> 
                         <button type="submit" class="btn btn-secondary" id="editBtn" name="edit" disabled>
