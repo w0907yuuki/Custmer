@@ -15,7 +15,7 @@ import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
 public class CustomerEditServiceImpl  implements CustomerEditService{
-
+	/** 顧客情報テーブルRepository */
 	private final CustomerRepository repository;
 	
 	
@@ -28,17 +28,19 @@ public class CustomerEditServiceImpl  implements CustomerEditService{
 	public CustomerEditResult updateCustomerInfo(CustomerUpdateInfo customerUpdateInfo) {
 		var customerUpdateResult = new CustomerEditResult();
 		
+		// 現在の登録情報を取得
 		var updateInfoOpt = repository.findById(customerUpdateInfo.getCustomerid());
 		System.out.println("updateInfoOpt ="+updateInfoOpt);
 		if(updateInfoOpt.isEmpty()) {
 			customerUpdateResult.setUpdateMessage(CustomerEditMessage.FAILED);
 			return customerUpdateResult;
 		}
-		
+		// 画面の入力情報等をセット
 		var updateInfo = updateInfoOpt.get();
 		updateInfo.setState(customerUpdateInfo.state);
 		updateInfo.setName(customerUpdateInfo.name);
 		System.out.println("updateInfo = " +updateInfo);
+		//顧客情報編集したデータをupdateする
 		try {
 			repository.save(updateInfo);
 		}catch(Exception e) {

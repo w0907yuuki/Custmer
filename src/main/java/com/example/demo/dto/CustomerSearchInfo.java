@@ -1,5 +1,7 @@
 package com.example.demo.dto;
 
+import com.example.demo.constant.db.CustomerStateKind;
+
 import lombok.Data;
 
 //顧客検索DTOクラス
@@ -13,7 +15,7 @@ public class CustomerSearchInfo {
 	 private String name;
 	 
 	 //取引状態
-	 private Boolean state;
+	 private CustomerStateKind state;
 	 
 	
 }

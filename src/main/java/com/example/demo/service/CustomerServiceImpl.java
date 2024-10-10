@@ -26,13 +26,13 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Override
 	public List<CustomerInfo>  getAllcustomer() {
-		return toCustmerInfos(repository.findAll());
+		return toCustomerInfos(repository.findAll());
 	}
 
 
 	@Override
 	public List<CustomerInfo> editCustomerListByParam(CustomerSearchInfo dto) {
-		return toCustmerInfos(findCustomerInfoByParam(dto));
+		return toCustomerInfos(findCustomerInfoByParam(dto));
 	}
 
 	/**
@@ -74,13 +74,14 @@ public class CustomerServiceImpl implements CustomerService {
 	 * @return　顧客リスト情報DTOのList
 	 * 
 	 * */
-	private List<CustomerInfo> toCustmerInfos(List<Customer> userInfos) {
-		var userListInfos = new ArrayList<CustomerInfo>();
-		for (Customer userInfo : userInfos) {
-			var userListInfo = mapper.map(userInfo, CustomerInfo.class);
-			userListInfos.add(userListInfo);
+	private List<CustomerInfo> toCustomerInfos(List<Customer> customerInfos) {
+		var customerListInfos = new ArrayList<CustomerInfo>();
+		for (Customer customerInfo : customerInfos) {
+			var customerListInfo = mapper.map(customerInfo, CustomerInfo.class);
+			customerListInfo.setState(customerInfo.getState().getDisplayValue());
+			customerListInfos.add(customerListInfo);
 		}
 
-		return userListInfos;
+		return customerListInfos;
 	}
 }

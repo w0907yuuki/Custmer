@@ -47,7 +47,16 @@
                                 </div>
                             </td>
                         </tr>
-						
+						<tr>
+	                        <td><span>取引状態：</span></td>
+	                        <td>
+	                            <select class="form-select" th:field="*{state}">
+	                                <option value="">指定なし</option>
+	                                <option th:each="customerStateOptions : ${customerStateOptions}"
+	                                    th:value="${customerStateOptions}" th:text="${customerStateOptions.displayValue}"></option>
+	                            </select>
+	                        </td>
+	                    </tr>
                     </table>
                     <input type="submit" class="btn btn-primary mt-3" name="search" value="検索">
                 </div>
@@ -65,7 +74,7 @@
                                 <tr th:each="customer, stat  : ${customerList}" >  
                                     <td th:id="|id_${stat.count}|"><span th:text="${customer.customerid}"></span></td>
                                     <td th:id="|name_${stat.count}|"><span th:text="${customer.name}"></span></td>
-                                    <td th:id="|isState_${stat.count}|"><span th:text="${customer.isState}"></span></td>
+                                    <td th:id="|state_${stat.count}|"><span th:text="${customer.state}"></span></td>
                                 </tr>
                             </tbody>
                         </table>

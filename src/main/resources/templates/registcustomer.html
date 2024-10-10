@@ -19,9 +19,9 @@
       </div>
      <span>取引状態：</span>
       <div class='checkstate'>
-        <input type="radio" value="true" th:field="*{state}">
+        <input type="radio" value="取引中" th:field="*{state}">
         <label for='radiostart'>取引中</label>
-        <input type="radio"  value="false" th:field="*{state}">
+        <input type="radio"  value="取引終了" th:field="*{state}">
         <label for='radioend'>取引終了</label> 
     　</div>
       <button>送信</button><br />

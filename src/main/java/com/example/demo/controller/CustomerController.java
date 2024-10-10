@@ -12,6 +12,7 @@ import com.example.demo.constant.CustomerDeleteResult;
 import com.example.demo.constant.SessionKeyConst;
 import com.example.demo.constant.UrlConst;
 import com.example.demo.constant.ViewNameConst;
+import com.example.demo.constant.db.CustomerStateKind;
 import com.example.demo.dto.CustomerSearchInfo;
 import com.example.demo.form.CustomerForm;
 import com.example.demo.service.CustomerService;
@@ -37,7 +38,10 @@ public class CustomerController {
 	@GetMapping(UrlConst.CUSTOMER)
 	public String View(Model model,CustomerForm customerForm) {
  		var custmer = service.getAllcustomer(); 
+ 		System.out.println(custmer);
 		model.addAttribute("customerList",custmer);
+		System.out.println(CustomerStateKind.values());
+		model.addAttribute("customerStateOptions",CustomerStateKind.values());
 		return ViewNameConst.CUSTOMER_LIST; 
 	}
 	

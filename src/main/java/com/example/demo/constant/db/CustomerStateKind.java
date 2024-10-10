@@ -1,4 +1,4 @@
-/**package com.example.demo.constant.db;
+package com.example.demo.constant.db;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,6 +14,14 @@ public enum CustomerStateKind {
 	private boolean isState;
 	
 	private String displayValue;
-		
+	
+	//enumの値をdisplayValueに基づいて返す
+	public static CustomerStateKind fromDisplayValue(String displayValue) {
+	        for (CustomerStateKind state : CustomerStateKind.values()) {
+	            if (state.getDisplayValue().equals(displayValue)) {
+	                return state;
+	            }
+	        }
+	        throw new IllegalArgumentException("Unknown display value: " + displayValue);
+	    }
 }
-*/

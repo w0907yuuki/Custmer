@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import jakarta.servlet.http.HttpSession;
+
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,7 +20,6 @@ import com.example.demo.service.UserListService;
 import com.example.demo.util.AppUtil;
 import com.github.dozermapper.core.Mapper;
 
-import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 
 /**
@@ -65,6 +66,7 @@ public class UserListController {
 		session.removeAttribute(SessionKeyConst.SELECETED_LOGIN_ID);
 
 		var userInfos = service.editUserList();
+		//model DBからjsp,Thymeleafに値を渡す
 		model.addAttribute(KEY_USERLIST, userInfos);
 
 		model.addAttribute(KEY_USER_STATUS_KIND_OPTIONS, UserStatusKind.values());

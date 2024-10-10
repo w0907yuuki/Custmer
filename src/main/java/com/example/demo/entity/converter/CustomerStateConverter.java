@@ -1,4 +1,4 @@
-/*package com.example.demo.entity.converter;
+package com.example.demo.entity.converter;
 
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
@@ -15,8 +15,7 @@ public class CustomerStateConverter implements AttributeConverter<CustomerStateK
 	
 	@Override
 	public CustomerStateKind convertToEntityAttribute(Boolean isState) {
-		return isState ? CustomerStateKind.DISABLE : CustomerStateKind.ENABLE;
+		return isState ? CustomerStateKind.ENABLE : CustomerStateKind.DISABLE;
 	}
 	
 }
-*/

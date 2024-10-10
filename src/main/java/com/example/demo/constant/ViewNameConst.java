@@ -34,7 +34,7 @@ public class ViewNameConst {
 	/** 顧客リスト画面 */
 	public static final String CUSTOMER_LIST = "customer";
 	
-	/** 顧客リスト画面 */
+	/** 顧客登録画面 */
 	public static final String CUSTOMER_LIST_REGIST = "registcustomer";
 	
 

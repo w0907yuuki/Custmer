@@ -12,5 +12,5 @@ public class CustomerInfo {
 	//取引開始時間
 	private String start_time;
 	//取引状態
-	private boolean isState;
+	private String state;
 }

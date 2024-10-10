@@ -31,7 +31,7 @@ public interface CustomerRepository extends JpaRepository<Customer,Long>{
 	 * @param 取引状態　state
 	 * @return 検索でヒットした顧客情報のリスト
 	 */
-	List<Customer> findByisState(Boolean isState); 
+	List<Customer> findByState(Boolean isState); 
 	
 	
 } 
