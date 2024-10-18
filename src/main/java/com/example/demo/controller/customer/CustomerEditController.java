@@ -13,6 +13,7 @@ import com.example.demo.constant.CustomerEditMessage;
 import com.example.demo.constant.MessageConst;
 import com.example.demo.constant.SessionKeyConst;
 import com.example.demo.constant.UrlConst;
+import com.example.demo.constant.ViewNameConst;
 import com.example.demo.constant.db.CustomerStateKind;
 import com.example.demo.dto.customer.CustomerEditInfo;
 import com.example.demo.dto.customer.CustomerUpdateInfo;
@@ -48,10 +49,10 @@ public class CustomerEditController {
 		var customerInfoOpt = service.serchCustomerInfo(customerid);
 		if(customerInfoOpt.isEmpty()) {
 			model.addAttribute("message",AppUtil.getMessage(messageSource, MessageConst.CUSTOMEREDIT_NON_EXISTED_CUSTOMER_ID));
-		    return  "customeredit";
+		    return  ViewNameConst.CUSTOMER_LIST_EDIT;
 		}
 		setupCommonInfo(model, customerInfoOpt.get());
-		return "customeredit";
+		return ViewNameConst.CUSTOMER_LIST_EDIT;
 	} 
 	/**
 	 * 画面の入力情報をもとにユーザー情報を更新します。
@@ -79,7 +80,7 @@ public class CustomerEditController {
 		model.addAttribute("isError",false);
 		model.addAttribute("message", AppUtil.getMessage(messageSource,updateMessage.getMessageId()));
 		System.out.println("更新終了");
-		return "customeredit";
+		return ViewNameConst.CUSTOMER_LIST_EDIT;
 		
 	}
 	/**
