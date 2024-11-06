@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+
+</head>
+	<div th:insert="~{common/sourceList :: sourceList}"></div>
+   	<div th:replace="~{common/messageIcon :: messageIcon}"></div>
+   	<script type="text/javascript" th:src="@{/js/reception.js}"></script>
+   	<div class="container-fluid">
+    	<div class="alert d-flex align-items-center mt-3" th:classappend="|${isError ? 'alert-danger' : 'alert-primary'}|" role="alert" th:if="${message != null}">
+			<svg class="bi flex-shrink-0 me-2" width="24" height="24">
+	        	<use xlink:href="#exclamation-triangle-fill" th:if="${isError}" />
+	            <use xlink:href="#info-fill" th:unless="${isError}"/>
+	        </svg>
+	        <span th:text="${message}"></span>
+     	</div>
+	   	<h2 class="mt-3">予約受付</h2>
+		<h2 class="mt-3">予約日付</h2>
+	   	<input type="date" id="calendar" /></br>
+		<h2>予約時間</h2>
+		<input type="time" id="time" value="" /><br>
+		<h2 class="mt-3">予約人数</h2>
+		<select id="headcount" name="count">
+			<option value="">人数を選択</option>
+			<option value="1">1人</option>
+			<option value="2">2人</option>
+			<option value="3">3人</option>
+			<option value="4">4人</option>
+			<option value="5">5人</option>
+		</select></br>
+		<h2 class="mt-3">予約コース</h2>
+		<select id="course" name="course">
+			<option value="">コースを選択</option>
+			<option value="pine">食べ放題(松) 4000円</option>
+			<option value="bamboo">食べ放題(竹) 5000円</option>
+			<option value="plum">食べ放題(梅) 6000円</option>
+		</select><br>
+		<button type="button" class="btn btn-primary mt-3" id="receptDummyBtn" data-bs-toggle="modal" data-bs-target="#receptConfirm">
+			<i class="bi bi-trash"></i>予約
+		</button> 
+	</div>
+	<div class="modal fade" id="receptConfirm" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">予約前確認</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+					<p>上記の内容で予約してもよろしいですか？</p>
+                   	<p><strong>予約日付:</strong> <span id="confirmDate"></span></p>
+                   	<p><strong>予約人数:</strong> <span id="confirmHeadcount"></span></p>
+                   	<p><strong>予約コース:</strong> <span id="confirmCourse"></span></p>
+                   	<p>※当日キャンセルはキャンセル料がかかる場合があります。</p>
+				</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">キャンセル</button>
+                    <button type="button" class="btn btn-primary" id="receptOkBtn">予約する</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
