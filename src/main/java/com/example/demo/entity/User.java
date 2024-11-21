@@ -2,16 +2,17 @@ package com.example.demo.entity;
 
 import java.time.LocalDateTime;
 
-import com.example.demo.constant.db.AuthorityKind;
-import com.example.demo.constant.db.UserStatusKind;
-import com.example.demo.entity.converter.UserAuthorityConverter;
-import com.example.demo.entity.converter.UserStatusConverter;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Convert;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+
+import com.example.demo.constant.db.AuthorityKind;
+import com.example.demo.constant.db.UserStatusKind;
+import com.example.demo.entity.converter.UserAuthorityConverter;
+import com.example.demo.entity.converter.UserStatusConverter;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -47,7 +48,7 @@ public class User {
 	private String userid;
 	
 	@Column(name="password")
-	private String password;	
+	private String password;
 	
 	/** ログイン失敗回数 */
 	@Column(name = "login_failure_count")

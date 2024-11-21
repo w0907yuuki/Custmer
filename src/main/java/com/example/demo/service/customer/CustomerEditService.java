@@ -8,8 +8,8 @@ import com.example.demo.entity.Customer;
 
 public interface CustomerEditService {
 	
-	public Optional<Customer> serchCustomerInfo(Long customerid);
+	Optional<Customer> serchCustomerInfo(Long customerid);
 
 	
-	public CustomerEditResult updateCustomerInfo(CustomerUpdateInfo customerUpdateInfo);
+	CustomerEditResult updateCustomerInfo(CustomerUpdateInfo customerUpdateInfo);
 }

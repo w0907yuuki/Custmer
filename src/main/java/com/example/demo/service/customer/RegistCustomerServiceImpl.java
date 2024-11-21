@@ -50,7 +50,7 @@ public class RegistCustomerServiceImpl implements RegistCustomerService {
 		customerInfo.setCustomerid(dto.getCustomerid());
 		customerInfo.setName(dto.getName());
 		customerInfo.setState(CustomerStateKind.fromDisplayValue(dto.getState()));
-		customerInfo.setStart_time(LocalDateTime.now());		
+		customerInfo.setStart_time(LocalDateTime.now());
 		return customerInfo;
 	}
 }

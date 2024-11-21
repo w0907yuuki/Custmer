@@ -1,5 +1,7 @@
 package com.example.demo.controller.user;
 
+import jakarta.servlet.http.HttpSession;
+
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +17,6 @@ import com.example.demo.constant.ViewNameConst;
 import com.example.demo.service.login.SignupConfirmService;
 import com.example.demo.util.AppUtil;
 
-import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 
 /**

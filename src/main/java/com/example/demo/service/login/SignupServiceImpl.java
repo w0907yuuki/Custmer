@@ -118,7 +118,7 @@ public class SignupServiceImpl implements SignupService {
 		userInfo.setPassword(passwordEncoder.encode(dto.getPassword()));
 		userInfo.setMailaddress(dto.getMailaddress());
 		userInfo.setBirthyear(dto.getBirthyear());
-		userInfo.setBirthmon(dto.getBirthmon());	
+		userInfo.setBirthmon(dto.getBirthmon());
 		userInfo.setBirthday(dto.getBirthday());
 		userInfo.setFirstname(dto.getFirstname());
 		userInfo.setLastname(dto.getLastname());

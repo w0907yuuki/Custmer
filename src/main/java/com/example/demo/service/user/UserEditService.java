@@ -20,7 +20,7 @@ public interface UserEditService {
 	 * @param loginId ログインID
 	 * @return 該当のユーザー情報テーブル登録情報
 	 */
-	public Optional<User> searchUserInfo(String userid);
+	Optional<User> searchUserInfo(String userid);
 
 	/**
 	 * ユーザー情報テーブルを更新します。
@@ -28,6 +28,6 @@ public interface UserEditService {
 	 * @param userUpdateInfo ユーザー更新情報
 	 * @return 更新結果
 	 */
-	public UserEditResult updateUserInfo(UserUpdateInfo userUpdateInfo);
+	UserEditResult updateUserInfo(UserUpdateInfo userUpdateInfo);
 
 }

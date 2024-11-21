@@ -1,9 +1,9 @@
 package com.example.demo.entity.converter;
 
-import com.example.demo.constant.db.UserStatusKind;
-
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
+
+import com.example.demo.constant.db.UserStatusKind;
 
 /**
  * ユーザー情報 ユーザー状態種別フィールドConverterクラス

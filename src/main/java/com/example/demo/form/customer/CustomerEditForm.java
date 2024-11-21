@@ -13,4 +13,4 @@ public class CustomerEditForm {
 	//取引状態
 	private CustomerStateKind state;
 	
-} 
+}

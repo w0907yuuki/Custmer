@@ -2,10 +2,12 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-
+<meta name="_csrf" th:content="${_csrf.token}"/>
+<meta name="_csrf_header" th:content="${_csrf.headerName}"/>
 </head>
 <body>
 	<div th:insert="~{common/sourceList :: sourceList}"></div>
+	<div th:replace="~{common/header :: header}"></div>
    	<div th:replace="~{common/messageIcon :: messageIcon}"></div>
    	<script type="text/javascript" th:src="@{/js/receptionmanagement.js}"></script>
    	<div class="container-fluid">
@@ -64,9 +66,12 @@
 			        <button type="submit" class="btn btn-primary" name="regist">
 			            <i class="bi bi-plus-lg"></i>登録
 			        </button> 
-			        <button type="submit" class="btn btn-secondary" id="editBtn" name="edit" disabled>
+			        <button type="button" class="btn btn-secondary" id="editBtn" name="edit" >
 			            <i class="bi bi-pencil"></i>編集
-			        </button>   
+			        </button>
+					<button type="button" class="btn btn-primary" id="saveBtn"name="save" disabled>
+					    <i class="bi bi-trash"></i>保存
+					</button>   
 			        <button type="button" class="btn btn-danger" id="deleteDummyBtn" data-bs-toggle="modal" data-bs-target="#deleteConfirm" disabled>
 			            <i class="bi bi-trash"></i>削除
 			        </button>   

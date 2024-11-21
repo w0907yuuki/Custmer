@@ -22,19 +22,19 @@ public interface CustomerService {
 	 * 
 	 * @return　すべての顧客情報
 	 * */
-	public List<CustomerInfo> getAllcustomer();
+	List<CustomerInfo> getAllcustomer();
 	
 	/*
 	 * 検索条件に合う顧客情報を取得
 	 * 
 	 * @return 条件に合う顧客情報
 	 * */
-	public List<CustomerInfo> editCustomerListByParam(CustomerSearchInfo dto);
+	List<CustomerInfo> editCustomerListByParam(CustomerSearchInfo dto);
 	
 	/*
 	 * 指定した顧客情報を削除
 	 * 
 	 * @return 実行結果
 	 * */
-	public CustomerDeleteResult deleteCustomerInfoById(Long customerid);
+	CustomerDeleteResult deleteCustomerInfoById(Long customerid);
 }

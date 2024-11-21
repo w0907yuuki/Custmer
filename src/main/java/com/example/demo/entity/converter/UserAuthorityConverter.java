@@ -1,9 +1,9 @@
 package com.example.demo.entity.converter;
 
-import com.example.demo.constant.db.AuthorityKind;
-
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
+
+import com.example.demo.constant.db.AuthorityKind;
 
 /**
  * ユーザー情報 権限フィールドConverterクラス

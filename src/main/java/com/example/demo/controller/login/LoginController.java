@@ -1,5 +1,7 @@
 package com.example.demo.controller.login;
 
+import jakarta.servlet.http.HttpSession;
+
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.WebAttributes;
 import org.springframework.stereotype.Controller;
@@ -12,7 +14,6 @@ import com.example.demo.constant.ViewNameConst;
 import com.example.demo.form.login.LoginForm;
 import com.example.demo.service.login.LoginService;
 
-import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 
 @Controller

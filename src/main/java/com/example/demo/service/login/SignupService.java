@@ -23,7 +23,7 @@ public interface SignupService {
 	 * @param dto 仮登録用情報
 	 * @return 仮登録情報(ユーザー情報Entity)、既に同じユーザIDで登録がある場合はEmpty
 	 */
-	public SignupResult signup(SignupInfo dto);
+	SignupResult signup(SignupInfo dto);
 
 	/**
 	 * {@inheritDoc}

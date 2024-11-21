@@ -37,23 +37,23 @@ public class CustomerController {
 
 	@GetMapping(UrlConst.CUSTOMER)
 	public String View(Model model,CustomerForm customerForm) {
- 		var custmer = service.getAllcustomer(); 
+ 		var custmer = service.getAllcustomer();
  		System.out.println(custmer);
 		model.addAttribute("customerList",custmer);
 		System.out.println(CustomerStateKind.values());
 		model.addAttribute("customerStateOptions",CustomerStateKind.values());
-		return ViewNameConst.CUSTOMER_LIST; 
+		return ViewNameConst.CUSTOMER_LIST;
 	}
 	
 	/* 検索機能　ボタン押下時実行
 	   @return 検索条件に合う顧客情報 */
 	@PostMapping(value = UrlConst.CUSTOMER, params = "search")
-	public String searchCustomer(Model model , CustomerForm customerForm) { 		
+	public String searchCustomer(Model model , CustomerForm customerForm) {
 		var searchDto = mapper.map(customerForm,CustomerSearchInfo.class);
 		var customerInfos = service.editCustomerListByParam(searchDto);
 		
 		model.addAttribute("customerList",customerInfos);
-		return ViewNameConst.CUSTOMER_LIST; 
+		return ViewNameConst.CUSTOMER_LIST;
 	}
 	
 	/* 顧客情報　登録
@@ -62,7 +62,7 @@ public class CustomerController {
 	public String registCustomer(Model model,CustomerForm customerForm) {
 		model.addAttribute("registcustomerForm", new CustomerForm());
 		return ViewNameConst.CUSTOMER_LIST_REGIST;
-	} 
+	}
 	
 	/* 顧客情報　編集
 	   @return 編集画面URL*/

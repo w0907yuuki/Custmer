@@ -13,7 +13,7 @@ public class CustomerForm {
 	//顧客名
 	private String name;
 	//取引状態
-	private CustomerStateKind state; 
+	private CustomerStateKind state;
 	//選択した顧客ID
 	private Long selectedcustomerid;
 	//選択した顧客IDのクリア

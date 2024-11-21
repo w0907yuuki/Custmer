@@ -16,5 +16,5 @@ public interface MailSendService {
 	 * @param mailText 本文
 	 * @return 送信結果(成功ならtrue)
 	 */
-	public boolean sendMail(String mailTo, String mailSubject, String mailText);
+	boolean sendMail(String mailTo, String mailSubject, String mailText);
 }

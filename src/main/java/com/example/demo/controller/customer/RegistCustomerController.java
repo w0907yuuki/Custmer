@@ -55,7 +55,7 @@ public class RegistCustomerController {
 			model.addAttribute(FORM_CLASS_NAME, new RegistCustomerForm());
 		}
 		return ViewNameConst.CUSTOMER_LIST_REGIST;
-	} 
+	}
 	@PostMapping(UrlConst.CUSTOMER_REGIST)
 	public String regist(@Validated RegistCustomerForm registcustomerForm,BindingResult result,RedirectAttributes redirectAttributes) {
 		

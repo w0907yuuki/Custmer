@@ -78,7 +78,7 @@ public class MessageConst {
 	/** 顧客編集画面　：　顧客編集完了 */
 	public static final String CUSTOMEREDIT_CUSTOMER_SUCCEED = "customerEdit.updateSucceed";
 	
-	/** 顧客編集画面　：　顧客編集失敗 */ 
+	/** 顧客編集画面　：　顧客編集失敗 */
 	public static final String CISTOMEREDIT_CUSTOMER_FAILED = "customerEdit.updateFailed";
 	
 	/**顧客編集画面　：　顧客削除成功 */

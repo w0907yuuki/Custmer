@@ -41,7 +41,7 @@ public class CustomerEditController {
 	 * 
 	 * @param model モデル
 	 * @return 表示画面
-	 * @throws Exception 
+	 * @throws Exception
 	 */
 	@GetMapping(UrlConst.CUSTOMER_EDIT)
 	public String View(Model model,CustomerEditForm form) throws Exception {
@@ -53,7 +53,7 @@ public class CustomerEditController {
 		}
 		setupCommonInfo(model, customerInfoOpt.get());
 		return ViewNameConst.CUSTOMER_LIST_EDIT;
-	} 
+	}
 	/**
 	 * 画面の入力情報をもとにユーザー情報を更新します。
 	 * 
@@ -89,7 +89,7 @@ public class CustomerEditController {
 	 * @param model モデル
 	 * @param editedForm 入力済みのフォーム情報
 	 */
-	private void setupCommonInfo(Model model, com.example.demo.entity.Customer customerInfo) { 
+	private void setupCommonInfo(Model model, com.example.demo.entity.Customer customerInfo) {
 		model.addAttribute("customerEditForm", mapper.map(customerInfo,CustomerEditForm.class));
 		model.addAttribute("customerEditInfo",mapper.map(customerInfo,CustomerEditInfo.class));
 		model.addAttribute("customerStateOptions",CustomerStateKind.values());

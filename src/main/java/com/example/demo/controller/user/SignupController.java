@@ -1,5 +1,7 @@
 package com.example.demo.controller.user;
 
+import jakarta.servlet.http.HttpSession;
+
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,7 +22,6 @@ import com.example.demo.service.login.SignupService;
 import com.example.demo.util.AppUtil;
 import com.github.dozermapper.core.Mapper;
 
-import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 
 /**

@@ -49,18 +49,18 @@ public class CustomerServiceImpl implements CustomerService {
 		}
 		repository.deleteById(customerid);
 		
-		return CustomerDeleteResult.SUCCEED;  
+		return CustomerDeleteResult.SUCCEED;
 	}
 	/*顧客情報の条件検索を行い、検索結果を返す
 	 * 
 	 * 
 	 * @return 検索結果
 	 * */
-	private List<Customer> findCustomerInfoByParam(CustomerSearchInfo dto){ 
+	private List<Customer> findCustomerInfoByParam(CustomerSearchInfo dto){
 		
-		if(dto.getName() != null && !dto.getName().isEmpty() ) 
+		if(dto.getName() != null && !dto.getName().isEmpty() )
 		{
-			return repository.findByNameLike("%" + dto.getName() + "%" ); 
+			return repository.findByNameLike("%" + dto.getName() + "%" );
 		}else if (dto.getId() != null) {
 			return repository.findByCustomerid(dto.getId());
 		}

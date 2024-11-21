@@ -11,11 +11,11 @@ import com.example.demo.dto.reception.ReceptionSearchInfo;
 @Service
 public interface ReceptionService {
 
-	public List<ReceptionInfo> getAllreception();
+	List<ReceptionInfo> getAllreception();
 	
-	public List<ReceptionInfo> editReceptionListByParam(ReceptionSearchInfo dto);
+	List<ReceptionInfo> editReceptionListByParam(ReceptionSearchInfo dto);
 	
-	public ReceptionDeleteResult deleteReceptionInfoById(Long id);
+	ReceptionDeleteResult deleteReceptionInfoById(Long id);
 	
 	
 }

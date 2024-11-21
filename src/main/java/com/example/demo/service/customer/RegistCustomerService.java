@@ -5,5 +5,5 @@ import com.example.demo.dto.customer.CustomerInfo;
 
 public interface RegistCustomerService {
 
-	public RegistResult regist(CustomerInfo dto);
+	RegistResult regist(CustomerInfo dto);
 }
